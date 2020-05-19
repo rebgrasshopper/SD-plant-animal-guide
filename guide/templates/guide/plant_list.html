@@ -1,16 +1,67 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        
-        <title>Plants and Animals of the San Diego Canyons</title>
-    </head>
-    <body>
-        <div id="body">
-            <div id="banner">
-                <h1>A Journey Through the Canyons and Trails</h1>
+{% extends 'guide/base.html' %}
+
+{% block content %}
+<div id='catalogue'>
+    <div id='native_div'>
+        <div>
+            <h2 class='native_plant_title'>Native Plants</h2>
+        </div class='garden_plot'>
+        {% for plant in native_plants %}
+            <div class='garden'>
+                <div class='garden_marker'>
+                    <h3 class='garden_marker'><a href='#'>{{ plant.name }}</a></h3>
+                    <p class='info'>Latin name: {{ plant.genus }} {{ plant.species }}</p>
+                </div>
+                <div class='garden_marker'>
+                    <img class='thumbnail' src='{{ plant.image_whole.url }}' title='{{ plant.image_whole_title }}' height = '100px'>
+                    <h3 class='subject'>Description:</h3>
+                    <p class='short'>{{ plant.description }}</p>
+                </div>
             </div>
+            <br />
+        {% endfor %}
+    </div>
+
+
+    <div id='non_native_div'>
+        <div>
+            <h2 class='non_native_plant_title'>Non-native Plants</h2>
         </div>
-    </body>   
-</html>
+        {% for plant in non_native_plants %}
+            <div class='garden'>
+                <div class='garden_marker'>
+                    <h3 class='garden_marker'><a href='#'>{{ plant.name }}</a></h3>
+                    <p class='info'>Latin name: {{ plant.genus }} {{ plant.species }}</p>
+                </div>
+                <div class='garden_marker'>
+                    <img class='thumbnail' src='{{ plant.image_whole.url }}' title='{{ plant.image_whole_title }}' height = '100px'>
+                    <h3 class='subject'>Description:</h3>
+                    <p class='short'>{{ plant.description }}</p>
+                </div>
+            </div>
+            <br />
+        {% endfor %}
+    </div>
+
+    <div id='invasive_div'>
+        <div>
+            <h2 class='invasive_plant_title'>Invasive Plants</h2>
+        </div>
+        {% for plant in invasive_plants %}
+            <div class='garden'>
+                <div class='garden_marker'>
+                    <h3 class='garden_marker'><a href='#'>{{ plant.name }}</a></h3>
+                    <p class='info'>Latin name: {{ plant.genus }} {{ plant.species }}</p>
+                </div>
+                <div class='garden_marker'>
+                    <img class='thumbnail' src='{{ plant.image_whole.url }}' title='{{ plant.image_whole_title }}' height = '100px'>
+                    <h3 class='subject'>Description:</h3>
+                    <p class='short'>{{ plant.description }}</p>
+                </div>
+            </div>
+            <br />
+        {% endfor %}
+    </div>
+    <div class='clear_div'></div>
+</div>
+{% endblock %}

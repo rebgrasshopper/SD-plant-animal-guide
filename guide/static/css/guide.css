@@ -1,0 +1,121 @@
+/** whole page **/
+
+*, body {
+    background-color: rgb(218, 196, 125);
+    color: rgb(92, 60, 18);
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/** titles and banners **/
+
+#banner {
+    margin-bottom: 30px;
+}
+
+/** plant summaries general **/
+
+#catalogue {
+    background-color: khaki;
+    border-radius: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.garden {
+    width: 294px;
+    border-style: groove;
+    border-width: 2px;
+    border-color: rgb(92, 60, 18);
+    border-radius: 15%;
+    padding: 8px;
+    background-color: khaki;
+}
+
+.garden_marker {
+    background-color: khaki;
+}
+
+.thumbnail {
+    margin-top: 10px;
+    background-color: khaki;
+}
+
+.short {
+    margin:0px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    background-color: khaki;
+}
+
+.info, .subject {
+    margin: 0px;
+    background-color: khaki;
+}
+
+
+/** plant summaries by group **/
+
+/** titles **/
+
+.native_plant_title {
+    background-color: khaki;
+}
+
+.non_native_plant_title {
+    background-color: khaki
+}
+
+.invasive_plant_title {
+    background-color: khaki;
+}
+
+/** plant category style **/
+
+#native_div /**left**/{
+    width: 310px;
+    float: left;
+    margin-left: 15px;
+    background-color: khaki;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%;
+}
+
+#non_native_div /**center**/{
+    width: 310px;
+    float: left;
+    background-color: khaki;
+}
+
+#invasive_div /**right**/{
+    width: 310;
+    float: left;
+    background-color: khaki;
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+
+/** sub-element background colors **/
+
+#native_div > div, #native_div > p, #native_div > h3, #native_div > img {
+    background-color: khaki;
+}
+
+#non_native_div > div, #non_native_div > p, #non_native_div > h3, #non_native_div > img {
+    background-color: khaki;
+}
+
+#invasive_div > div, #invasive_div > p, #invasive_div > h3, #invasive_div > img {
+    background-color: khaki;
+}
+
+/** clear floats **/
+
+.clear_div {
+    clear: both;
+}

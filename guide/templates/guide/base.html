@@ -1,14 +1,23 @@
-<!DOCTYPE html>
+{% load static %}
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/guide.css' %}">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        
+
         <title>Plants and Animals of the San Diego Canyons</title>
     </head>
     <body>
         <div id="body">
-
+            <div id='banner' class="banner">
+                <h1 class='banner'>A Journey Through the Canyons and Trails</h1>
+                <h3 class='banner'>Documenting the plant and animal life in San Diego</h3>
+            </div>
+            <div id='sub_body'>
+                {% block content %}
+                    
+                {% endblock %}
+            </div>
         </div>
     </body>   
 </html>

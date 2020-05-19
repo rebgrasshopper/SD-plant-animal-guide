@@ -8,5 +8,7 @@ def plant_detail(request, pk):
 
 def plant_list(request):
     '''view for main page'''
-    plants = Plant.objects
-    return render(request, "guide/plant_list.html", {'plants':plants})
+    native_plants = Plant.objects.filter(status='Native')
+    non_native_plants = Plant.objects.filter(status='Non-native')
+    invasive_plants = Plant.objects.filter(status='Invasive')
+    return render(request, "guide/plant_list.html", {'native_plants':native_plants, 'non_native_plants':non_native_plants, 'invasive_plants':invasive_plants})
