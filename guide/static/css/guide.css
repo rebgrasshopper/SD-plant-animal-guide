@@ -129,12 +129,12 @@ body {
 
 /** titles **/
 
-.native_plant_title {
+.non_native_plant_title {
     background-color: khaki;
     /** title banner source: <a href="https://www.freepik.com/free-photos-vectors/flower">Flower vector created by freepik - www.freepik.com</a> **/
 }
 
-.non_native_plant_title {
+.native_plant_title {
     background-color: rgba(243, 236, 171, 0);
 
 }
@@ -145,7 +145,7 @@ body {
 
 /** plant category style **/
 
-#native_div /**left**/{
+#non_native_div /**left**/{
     width: 310px;
     float: left;
     margin-left: 15px;
@@ -154,7 +154,7 @@ body {
     border-bottom-left-radius: 15%;
 }
 
-#non_native_div /**center**/{
+#native_div /**center**/{
     width: 310px;
     float: left;
     background-color: rgb(243, 236, 171);
@@ -174,11 +174,11 @@ body {
 
 /** sub-element background colors **/
 
-#native_div > div, #native_div > p, #native_div > h3, #native_div > img {
+#non_native_div > div, #non_native_div > p, #non_native_div > h3, #non_native_div > img {
     background-color: khaki;
 }
 
-#non_native_div > div, #non_native_div > p, #non_native_div > h3, #non_native_div > img {
+#native_div > div, #native_div > p, #native_div > h3, #native_div > img {
     background-color: rgba(243, 236, 171, 0);
 }
 

@@ -2,9 +2,9 @@
 
 {% block content %}
 <div id='catalogue'>
-    <div id='native_div'>
+    <div id='non_native_div'>
         <div>
-            <h2 class='native_plant_title'>Non-native Plants</h2>
+            <h2 class='non_native_plant_title'>Non-native Plants</h2>
         </div class='garden_plot'>
         {% for plant in non_native_plants %}
             <div class='garden'>
@@ -23,9 +23,9 @@
     </div>
 
 
-    <div id='non_native_div'>
+    <div id='native_div'>
         <div>
-            <h2 class='non_native_plant_title'>Native Plants</h2>
+            <h2 class='native_plant_title'>Native Plants</h2>
         </div>
         {% for plant in native_plants %}
             <div class='garden_mid'>
