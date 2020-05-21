@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.db import models
-
+from django.utils import timezone
 
 class Plant(models.Model):
     name = models.CharField(max_length=200)
@@ -21,7 +21,10 @@ class Plant(models.Model):
     image_alternate2 = models.ImageField(upload_to='static/images/', default=None, blank=True, null=True)
     image_alternate2_title = models.CharField(max_length=400, default=None, blank=True, null=True)
     description = models.TextField(default=None, blank=True, null=True)
-    uses = models.TextField(default=None, blank=True, null=True)
+    food_uses = models.TextField(default=None, blank=True, null=True)
+    medicinal_uses = models.TextField(default=None, blank=True, null=True)
+    other_uses = models.TextField(default=None, blank=True, null=True)
+    date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
         self.save()

@@ -231,3 +231,7 @@ body {
     width: 225px;
     text-align: left;
 }
+
+#between_text {
+    width: 35%;
+}

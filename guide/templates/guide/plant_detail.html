@@ -37,11 +37,21 @@
             <h3 class='description_title'>Description:</h3>
             <p class='description_text'>{{ plant.description }}</p>
         </div>
-        <br />
-        <div class='detail_uses'>
-            <h3 class='uses_title'>Uses:</h3>
-            <p class='uses_text'>{{ plant.uses }}</p>
+        <hr id='between_text'>
+        <div class='detail_food_uses'>
+            <h3 class='food_uses_title'>Food Uses:</h3>
+            <p class='food_uses_text'>{{ plant.food_uses }}</p>
         </div>
+        <div class='detail_medicinal_uses'>
+            <h3 class='medicinal_uses_title'>Medicinal Uses:</h3>
+            <p class='medicinal_uses_text'>{{ plant.medicinal_uses }}</p>
+        </div>
+        {% if plant.other_uses %}
+        <div class='detail_other_uses'>
+            <h3 class='other_uses_title'>Additional Uses:</h3>
+            <p class='other_uses_text'>{{ plant.other_uses }}</p>
+        </div>
+        {% endif %}
     </div>
     <div class='clear_div'></div>
 </div>
