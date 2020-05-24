@@ -1,101 +1,120 @@
-{% extends 'guide/base.html' %}
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/guide.css' %}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-{% block content %}
-<div>
-    <!-- PLANT TYPE -->
-    <div class='detail_div'>
-        <br />
-        <h1 class='detail_title'>{{ plant.name }}</h1>
-    </div>
-    <hr>
-    <br />
-    <div class='detail_names'>
-        <ul>
-            <li>Species: {{plant.species }}</li>
-            <li>Genus: {{ plant.genus }}</li>
-            <li>Family: {{ plant.family }}</li>
-        </ul>
-    </div>
-    <br />
-    <hr>
-    <br />
+        <title>{{ plant.name }}, Plants and Animals of the San Diego Canyons</title>
+    </head>
+    <body>
+        <div id="body">
+            <div id='banner' class="banner">
+                <h1 class='banner'><a href='https://sandiegonaturejournal.pythonanywhere.com'>A Journey Through the Canyons and Trails</a></h1>
+                <h3 class='banner'>Documenting the plant and animal life in San Diego</h3>
+                <p id='credits'>plant information from <a href='https//www.wikipedia.org>Wikipedia'>Wikipedia</a>, photos by Plover Brown.</p>
+                <div class='clear_div'></div>
+            </div>
 
-    <!-- IMAGES -->
-    <div class='detail_image_div'>
-        <img id='detail_image' src="{{ plant.image_flower.url }}" title="{{ plant.image_flower_title }}">
-        <br /><br />
-        <button type="button" id="whole" onclick="becomeWhole()"><img src="{{ plant.image_whole.url }}" style="width: 75px; float: left;"></button>
-        <button type="button" id="leaf" onclick="becomeLeaf()"><img src="{{ plant.image_leaf.url }}" style="width: 75px; float: left;"></button>
-        <button type="button" id="flower" onclick="becomeFlower()"><img src="{{ plant.image_flower.url }}" style="width: 75px; float: left;"></button>
-        <button type="button" id="fruit" onclick="becomeFruit()"><img src="{{ plant.image_fruit.url }}" style="width: 75px; float: left;"></button>
+            <div id='sub_body'>
+                <div>
+                    <!-- PLANT TYPE -->
+                    <div class='detail_div'>
+                        <br />
+                        <h1 class='detail_title'>{{ plant.name }}</h1>
+                    </div>
+                    <hr>
+                    <br />
+                    <div class='detail_names'>
+                        <ul>
+                            <li>Species: {{plant.species }}</li>
+                            <li>Genus: {{ plant.genus }}</li>
+                            <li>Family: {{ plant.family }}</li>
+                        </ul>
+                    </div>
+                    <br />
+                    <hr>
+                    <br />
 
-    </div>
+                    <!-- IMAGES -->
+                    <div class='detail_image_div'>
+                        <img id='detail_image' src="{{ plant.image_flower.url }}" title="{{ plant.image_flower_title }}">
+                        <br /><br />
+                        <button type="button" id="whole" onclick="becomeWhole()"><img src="{{ plant.image_whole.url }}" style="width: 75px; float: left;"></button>
+                        <button type="button" id="leaf" onclick="becomeLeaf()"><img src="{{ plant.image_leaf.url }}" style="width: 75px; float: left;"></button>
+                        <button type="button" id="flower" onclick="becomeFlower()"><img src="{{ plant.image_flower.url }}" style="width: 75px; float: left;"></button>
+                        <button type="button" id="fruit" onclick="becomeFruit()"><img src="{{ plant.image_fruit.url }}" style="width: 75px; float: left;"></button>
 
-    <!-- TEXT -->
-    <div class='detail_text_div'>
-        <div class='detail_description'>
-            <h3 class='description_title'>Description:</h3>
-            <p class='description_text'>{{ plant.description|linebreaksbr }}</p>
+                    </div>
+
+                    <!-- TEXT -->
+                    <div class='detail_text_div'>
+                        <div class='detail_description'>
+                            <h3 class='description_title'>Description:</h3>
+                            <p class='description_text'>{{ plant.description|linebreaksbr }}</p>
+                        </div>
+                        <hr id='between_text'>
+                        <div class='detail_food_uses'>
+                            <h3 class='food_uses_title'>Food Uses:</h3>
+                            <p class='food_uses_text'>{{ plant.food_uses|linebreaksbr }}</p>
+                        </div>
+                        <div class='detail_medicinal_uses'>
+                            <h3 class='medicinal_uses_title'>Medicinal Uses:</h3>
+                            <p class='medicinal_uses_text'>{{ plant.medicinal_uses|linebreaksbr }}</p>
+                        </div>
+                        {% if plant.other_uses %}
+                        <div class='detail_other_notes'>
+                            <h3 class='other_notes_title'>Additional Notes:</h3>
+                            <p class='other_notes_text'>{{ plant.other_uses|linebreaksbr }}</p>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class='clear_div'></div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+                <script type="text/javascript">
+                    function becomeWhole() {
+                        document.getElementById("detail_image").src="{{ plant.image_whole.url }}"
+                    }
+
+                    function becomeLeaf() {
+                        document.getElementById("detail_image").src="{{ plant.image_leaf.url }}"
+                    }
+
+                    function becomeFlower() {
+                        document.getElementById("detail_image").src="{{ plant.image_flower.url }}"
+                    }
+
+                    function becomeFruit() {
+                        document.getElementById("detail_image").src="{{ plant.image_fruit.url }}"
+                    }
+                </script>
+            </div>
         </div>
-        <hr id='between_text'>
-        <div class='detail_food_uses'>
-            <h3 class='food_uses_title'>Food Uses:</h3>
-            <p class='food_uses_text'>{{ plant.food_uses|linebreaksbr }}</p>
-        </div>
-        <div class='detail_medicinal_uses'>
-            <h3 class='medicinal_uses_title'>Medicinal Uses:</h3>
-            <p class='medicinal_uses_text'>{{ plant.medicinal_uses|linebreaksbr }}</p>
-        </div>
-        {% if plant.other_uses %}
-        <div class='detail_other_notes'>
-            <h3 class='other_notes_title'>Additional Notes:</h3>
-            <p class='other_notes_text'>{{ plant.other_uses|linebreaksbr }}</p>
-        </div>
-        {% endif %}
-    </div>
-    <div class='clear_div'></div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-</div>
-<script type="text/javascript">
-    function becomeWhole() {
-        document.getElementById("detail_image").src="{{ plant.image_whole.url }}"
-    }
-
-    function becomeLeaf() {
-        document.getElementById("detail_image").src="{{ plant.image_leaf.url }}"
-    }
-
-    function becomeFlower() {
-        document.getElementById("detail_image").src="{{ plant.image_flower.url }}"
-    }
-
-    function becomeFruit() {
-        document.getElementById("detail_image").src="{{ plant.image_fruit.url }}"
-    }
-</script>
-{% endblock %}
+    </body>   
+</html>

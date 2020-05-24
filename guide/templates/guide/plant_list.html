@@ -9,11 +9,11 @@
         {% for plant in non_native_plants %}
             <div class='garden'>
                 <div class='garden_marker'>
-                    <h3 class='garden_marker'><a href="{% url 'plant_detail' pk=plant.pk %}">{{ plant.name }}</a></h3>
+                    <h3 class='garden_marker'><a href="{% url 'plant_detail' slug=plant.slug %}">{{ plant.name }}</a></h3>
                     <p class='info'>Latin name: {{ plant.genus }} {{ plant.species }}</p>
                 </div>
                 <div class='garden_marker'>
-                    <img class='thumbnail' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'>
+                    <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='thumbnail' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
                     <h3 class='subject'>Description:</h3>
                     <p class='short'>{{ plant.description }}</p>
                 </div>
@@ -30,11 +30,11 @@
         {% for plant in native_plants %}
             <div class='garden_mid'>
                 <div class='garden_marker_mid'>
-                    <h3 class='garden_marker_mid'><a href="{% url 'plant_detail' pk=plant.pk %}">{{ plant.name }}</a></h3>
+                    <h3 class='garden_marker_mid'><a href="{% url 'plant_detail' slug=plant.slug %}">{{ plant.name }}</a></h3>
                     <p class='info_mid'>Latin name: {{ plant.genus }} {{ plant.species }}</p>
                 </div>
                 <div class='garden_marker_mid'>
-                    <img class='thumbnail' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'>
+                    <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='thumbnail' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
                     <h3 class='subject_mid'>Description:</h3>
                     <p class='short_mid'>{{ plant.description }}</p>
                 </div>
@@ -50,11 +50,11 @@
         {% for plant in invasive_plants %}
             <div class='garden'>
                 <div class='garden_marker'>
-                    <h3 class='garden_marker'><a href="{% url 'plant_detail' pk=plant.pk %}">{{ plant.name }}</a></h3>
+                    <h3 class='garden_marker'><a href="{% url 'plant_detail' slug=plant.slug %}">{{ plant.name }}</a></h3>
                     <p class='info'>Latin name: {{ plant.genus }} {{ plant.species }}</p>
                 </div>
                 <div class='garden_marker'>
-                    <img class='thumbnail' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'>
+                    <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='thumbnail' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
                     <h3 class='subject'>Description:</h3>
                     <p class='short'>{{ plant.description }}</p>
                 </div>

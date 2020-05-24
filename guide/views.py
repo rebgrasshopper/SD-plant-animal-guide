@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Plant
 
-def plant_detail(request, pk):
+def plant_detail(request, slug):
     '''view for individual plant pages'''
-    plant = get_object_or_404(Plant, pk=pk)
+    template_name = 'plant_detail.html'
+    plant = get_object_or_404(Plant, slug=slug)
     return render(request, 'guide/plant_detail.html', { 'plant':plant })
 
 def plant_list(request):

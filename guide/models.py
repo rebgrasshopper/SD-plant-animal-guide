@@ -24,10 +24,16 @@ class Plant(models.Model):
     food_uses = models.TextField(default=None, blank=True, null=True)
     medicinal_uses = models.TextField(default=None, blank=True, null=True)
     other_uses = models.TextField(default=None, blank=True, null=True)
+    slug = models.SlugField(null=True)
     date = models.DateTimeField(blank=True, null=True)
+    
 
     def publish(self):
         self.save()
 
     def __str__(self):
         return self.name
+    
+    #just added this for slug tutorial
+    def get_absolute_url(self):
+        return reverse('plant_detail', kwargs={'slug' : self.slug})
