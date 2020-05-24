@@ -22,7 +22,7 @@
 
     <!-- IMAGES -->
     <div class='detail_image_div'>
-        <img id='detail_image' src="{{ plant.image_whole.url }}" title="{{ plant.image_whole_title }}">
+        <img id='detail_image' src="{{ plant.image_flower.url }}" title="{{ plant.image_flower_title }}">
         <br /><br />
         <button type="button" id="whole" onclick="becomeWhole()"><img src="{{ plant.image_whole.url }}" style="width: 75px; float: left;"></button>
         <button type="button" id="leaf" onclick="becomeLeaf()"><img src="{{ plant.image_leaf.url }}" style="width: 75px; float: left;"></button>
@@ -47,9 +47,9 @@
             <p class='medicinal_uses_text'>{{ plant.medicinal_uses }}</p>
         </div>
         {% if plant.other_uses %}
-        <div class='detail_other_uses'>
-            <h3 class='other_uses_title'>Additional Uses:</h3>
-            <p class='other_uses_text'>{{ plant.other_uses }}</p>
+        <div class='detail_other_notes'>
+            <h3 class='other_notes_title'>Additional Notes:</h3>
+            <p class='other_notes_text'>{{ plant.other_uses }}</p>
         </div>
         {% endif %}
     </div>
