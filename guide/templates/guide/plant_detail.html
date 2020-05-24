@@ -35,21 +35,21 @@
     <div class='detail_text_div'>
         <div class='detail_description'>
             <h3 class='description_title'>Description:</h3>
-            <p class='description_text'>{{ plant.description }}</p>
+            <p class='description_text'>{{ plant.description|linebreaksbr }}</p>
         </div>
         <hr id='between_text'>
         <div class='detail_food_uses'>
             <h3 class='food_uses_title'>Food Uses:</h3>
-            <p class='food_uses_text'>{{ plant.food_uses }}</p>
+            <p class='food_uses_text'>{{ plant.food_uses|linebreaksbr }}</p>
         </div>
         <div class='detail_medicinal_uses'>
             <h3 class='medicinal_uses_title'>Medicinal Uses:</h3>
-            <p class='medicinal_uses_text'>{{ plant.medicinal_uses }}</p>
+            <p class='medicinal_uses_text'>{{ plant.medicinal_uses|linebreaksbr }}</p>
         </div>
         {% if plant.other_uses %}
         <div class='detail_other_notes'>
             <h3 class='other_notes_title'>Additional Notes:</h3>
-            <p class='other_notes_text'>{{ plant.other_uses }}</p>
+            <p class='other_notes_text'>{{ plant.other_uses|linebreaksbr }}</p>
         </div>
         {% endif %}
     </div>
