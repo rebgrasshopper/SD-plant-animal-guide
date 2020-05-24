@@ -47,7 +47,7 @@ body {
 
 #catalogue {
     background-color: khaki;
-    border-radius: 10%;
+    border-radius: 5%;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -212,6 +212,7 @@ body {
 
 .detail_title {
     padding-bottom: 20px;
+    width: 320px;
     font-family: cursive;
     background-color: rgba(240, 230, 140, 0);
 }
