@@ -37,9 +37,87 @@ body {
 }
 
 
+#far_left_list_item {
+    border-radius: 10px 0px 0px 10px;
+}
+.end_li {
+    width: 460px; 
+    height:40px;
+    color: white;
+    background-color: rgb(53, 32, 6);
+    float:left;
+    display: block;
+    trasition-duration: 0.5s;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    border-radius: 0px 10px 10px 0px;;
+ }
+ 
+.nav_div {
+    background-color: rgb(53, 32, 6);
+
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+
+}
+
+ul li a:hover {
+    color: white;
+}
+
+ul {
+    background: rgb(53, 32, 6);
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
 
 
+.navli {
+    color: white;
+    background-color: rgb(53, 32, 6);
+    float:left;
+    width: 100px;
+    display: block;
+    trasition-duration: 0.5s;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+}
 
+
+.navli:hover {
+    background: rgb(155, 108, 50);
+    cursor: pointer;
+}
+
+ul li ul {
+    background-color: rgb(53, 32, 6);
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100px;
+}
 
 
 
@@ -48,7 +126,7 @@ body {
 
 #catalogue {
     background-color: khaki;
-    border-radius: 5%;
+    border-radius: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -58,7 +136,7 @@ body {
     border-style: groove;
     border-width: 2px;
     border-color: rgb(92, 60, 18);
-    border-radius: 15%;
+    border-radius: 40px;
     padding: 8px;
     background-color: khaki;
 }
@@ -94,7 +172,7 @@ body {
     border-style: groove;
     border-width: 2px;
     border-color: rgb(92, 60, 18);
-    border-radius: 15%;
+    border-radius: 40px;
     padding: 8px;
     background-color: rgb(243, 236, 171);
 }
@@ -151,26 +229,26 @@ body {
     float: left;
     margin-left: 15px;
     background-color: khaki;
-    border-top-left-radius: 15%;
-    border-bottom-left-radius: 15%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
 #native_div /**center**/{
     width: 310px;
     float: left;
     background-color: rgb(243, 236, 171);
-    border-top-left-radius: 15%;
-    border-top-right-radius: 15%;
-    border-bottom-right-radius: 10%;
-    border-bottom-left-radius: 10%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
 #invasive_div /**right**/{
     width: 310;
     float: left;
     background-color: khaki;
-    border-top-right-radius: 15%;
-    border-bottom-right-radius: 15%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 /** sub-element background colors **/

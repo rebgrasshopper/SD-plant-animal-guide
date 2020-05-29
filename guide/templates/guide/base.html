@@ -15,7 +15,26 @@
                 <p id='credits'>plant information from <a href='https//www.wikipedia.org>Wikipedia'>Wikipedia</a>, photos by Plover Brown.</p>
                 <div class='clear_div'></div>
             </div>
-
+            <div class='nav_div'>
+            <nav role='navigation'>
+                <ul class='nav_bar_list'>
+                    <li id='far_left_list_item' class='navli'><a href='#'>Home</a></li>
+                    <li class='navli'><a href='#'>About</a></li>
+                    <li class='navli'><a href='#'>Search</a></li>
+                    <li class='navli'><a href='#'>Contact</a></li>
+                    <li id='dropdown_item' class='navli'>
+                        <a href='javascript:void(0)' class='dropbtn'>Plants</a>
+                        <ul>
+                            <li class='navli'><a href='#'>Native</a></li>
+                            <li class='navli'><a href='#'>Non-Native</a></li>
+                            <li class='navli'><a href='#'>Invasive</a></li>
+                        </ul>                 
+                    </li>
+                    <li class='end_li'></li>
+                </ul>
+            </nav>
+            </div>
+            <div class='clear_div'></div>
             <div id='sub_body'>
                 {% block content %}
                     
