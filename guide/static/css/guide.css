@@ -36,6 +36,27 @@ body {
     margin-right: 100px;
 }
 
+/** clear floats **/
+
+.clear_div {
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**Nav Bar**/
 
 #far_left_list_item {
     border-radius: 10px 0px 0px 10px;
@@ -122,6 +143,21 @@ ul li ul li {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /** MAIN PAGE **/
 
 #catalogue {
@@ -204,6 +240,8 @@ ul li ul li {
 
 
 
+
+
 /** plant summaries by group **/
 
 /** titles **/
@@ -265,11 +303,16 @@ ul li ul li {
     background-color: khaki;
 }
 
-/** clear floats **/
 
-.clear_div {
-    clear: both;
-}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -287,6 +330,7 @@ ul li ul li {
     background-repeat: no-repeat;
     width: 350px;
     height: 200px;
+    margin-top: 30px;
 }
 
 .detail_title {
@@ -319,4 +363,38 @@ ul li ul li {
 
 #between_text {
     width: 35%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** ABOUT PAGE **/
+
+#about_title_div {
+    margin: 30px;
+    border-style: groove;
+    border-color: rgb(92, 60, 18);
+    border-radius: 15px;
+    padding-bottom: 10px;
+    width: 500px;
+    margin-left: 230px;
+}
+
+#about_text_div {
+    width: 600px;
+    margin-left: 180px;
 }

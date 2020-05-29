@@ -13,3 +13,8 @@ def plant_list(request):
     non_native_plants = Plant.objects.filter(status='Non-native')
     invasive_plants = Plant.objects.filter(status='Invasive')
     return render(request, "guide/plant_list.html", {'native_plants':native_plants, 'non_native_plants':non_native_plants, 'invasive_plants':invasive_plants})
+
+def about(request):
+    '''view for about page'''
+    return render(request, 'guide/about.html')
+
