@@ -6,3 +6,4 @@ plantvenv
 db.sqlite3
 /static
 .DS_Store
+/plants/gpass.py

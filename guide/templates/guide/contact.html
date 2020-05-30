@@ -1,0 +1,15 @@
+{% extends 'guide/base.html' %}
+
+    {% block content %}
+    <div id='contact_title_div'>
+        <h2>Please contact me here!</h2>
+    </div>
+
+    <div id='contact_form_div'>
+        <form role='form' action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type='submit'>Submit</button>
+        </form>
+    </div>
+    {% endblock %}
