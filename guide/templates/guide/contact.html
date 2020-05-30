@@ -2,14 +2,24 @@
 
     {% block content %}
     <div id='contact_title_div'>
+        <br /><br /><br />
         <h2>Please contact me here!</h2>
     </div>
 
     <div id='contact_form_div'>
         <form role='form' action="" method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+            <div>
+                <br /><br /><br />
+                <p>Your Name: {{ form.contact_name }}</p>
+                <br />
+                <p> Your Email: {{ form.contact_email }}</p>
+                <br /><br />
+                <h5>What's on your mind?</h5>
+                <p>{{ form.content }}</p>
+            </div>
             <button type='submit'>Submit</button>
         </form>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
     {% endblock %}
