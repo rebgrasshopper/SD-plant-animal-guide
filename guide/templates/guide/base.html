@@ -23,14 +23,20 @@
                     <li id='dropdown_item' class='navli'>
                         <a href='javascript:void(0)' class='dropbtn'>Plants</a>
                         <ul>
-                            <li class='navli'><a href='#'>Native</a></li>
-                            <li class='navli'><a href='#'>Non-Native</a></li>
-                            <li class='navli'><a href='#'>Invasive</a></li>
+                            <li class='navli_under'><a href='#'>Native</a></li>
+                            <li class='navli_under'><a href='#'>Non-Native</a></li>
+                            <li class='navli_under'><a href='#'>Invasive</a></li>
                         </ul>                 
                     </li>
-                    <li class='navli'><a href='#'>Search</a></li>
                     <li class='navli'><a href='{% url "contact" %}'>Contact</a></li>
                     <li class='end_li'></li>
+                    <li class='search_li'>
+                        <form action = "{% url 'search_results' %}" method="GET" value="{{ request.GET.q }}">
+                            <input id='search_box' name='q' type='text' value='{{ request.GET.q }}' placeholder='Search..'>
+                            <button id='search_button' type='submit' value="search"><img id='search_image' src="https://i.postimg.cc/13ZgVGpy/search-icon.png"></button>
+                        </form>
+                    </li>
+
                 </ul>
             </nav>
             </div>

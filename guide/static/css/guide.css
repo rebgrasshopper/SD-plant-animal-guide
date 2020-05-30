@@ -61,20 +61,7 @@ body {
 #far_left_list_item {
     border-radius: 10px 0px 0px 10px;
 }
-.end_li {
-    width: 460px; 
-    height:40px;
-    color: white;
-    background-color: rgb(53, 32, 6);
-    float:left;
-    display: block;
-    trasition-duration: 0.5s;
-    padding: 1rem;
-    position: relative;
-    text-decoration: none;
-    border-radius: 0px 10px 10px 0px;;
- }
- 
+
 .nav_div {
     background-color: rgb(53, 32, 6);
 
@@ -101,9 +88,19 @@ ul {
     color: white;
     background-color: rgb(53, 32, 6);
     float:left;
-    width: 100px;
+    width: 12%;
     display: block;
-    trasition-duration: 0.5s;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+}
+
+.navli_under {
+    color: white;
+    background-color: rgb(53, 32, 6);
+    float:left;
+    width: 116px;
+    display: block;
     padding: 1rem;
     position: relative;
     text-decoration: none;
@@ -140,10 +137,55 @@ ul li ul li {
     width: 100px;
 }
 
+.end_li {
+    width: 30%; 
+    height:40px;
+    color: white;
+    background-color: rgb(53, 32, 6);
+    float:left;
+    display: block;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
 
+ }
+ 
+.search_li {
+    background-color: rgb(53, 32, 6);
+    float:right;
+    display: block;
+    padding: 1rem;
+    width: 22%;
+    position: relative;
+    border-radius: 0px 10px 10px 0px;
+}
 
+#search_box {
+    float: left;
+    padding: 0;
+    width: 160px;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+}
 
+#search_button {
+    float: right;
+    background-color: rgb(53, 32, 6);
+    width: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    font-family: inherit;
+    border-style: none;
+    margin-right: 8px;
 
+    
+}
+
+#search_image {
+    width: 18px;
+}
 
 
 
@@ -398,3 +440,19 @@ ul li ul li {
     width: 600px;
     margin-left: 180px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** CONTACT PAGE **/

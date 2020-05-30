@@ -11,12 +11,12 @@
             {% csrf_token %}
             <div>
                 <br /><br /><br />
-                <p>Your Name: {{ form.contact_name }}</p>
+                <p>Your Name: <span class='form_field'>{{ form.contact_name }}</span></p>
                 <br />
-                <p> Your Email: {{ form.contact_email }}</p>
+                <p> Your Email: <span class='form_field'>{{ form.contact_email }}</span></p>
                 <br /><br />
                 <h5>What's on your mind?</h5>
-                <p>{{ form.content }}</p>
+                <p><span class='form_field'>{{ form.content }}</span></p>
             </div>
             <button type='submit'>Submit</button>
         </form>

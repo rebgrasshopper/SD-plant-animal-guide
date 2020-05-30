@@ -3,6 +3,7 @@ from .models import Plant
 from .forms import ContactForm
 from django.core.mail import EmailMessage, send_mail
 from django.template.loader import get_template
+from django.db.models import Q
 
 def plant_detail(request, slug):
     '''view for individual plant pages'''
@@ -12,9 +13,9 @@ def plant_detail(request, slug):
 
 def plant_list(request):
     '''view for main page'''
-    native_plants = Plant.objects.filter(status='Native')
-    non_native_plants = Plant.objects.filter(status='Non-native')
-    invasive_plants = Plant.objects.filter(status='Invasive')
+    native_plants = Plant.objects.filter(status='Native').order_by('-date')
+    non_native_plants = Plant.objects.filter(status='Non-native').order_by('-date')
+    invasive_plants = Plant.objects.filter(status='Invasive').order_by('-date')
     return render(request, "guide/plant_list.html", {'native_plants':native_plants, 'non_native_plants':non_native_plants, 'invasive_plants':invasive_plants})
 
 def about(request):
@@ -63,3 +64,25 @@ def contact(request):
             return redirect('contact')
 
     return render(request, 'guide/contact.html', {'form':form_class})
+
+
+def search_results(request):
+    if request.method == 'GET':
+        query= request.GET.get('q')
+
+        submitbutton= request.GET.get('submit')
+
+        if query is not None:
+
+            results= Plant.objects.filter(name__icontains=query)
+
+            context={'results': results,
+                     'submitbutton': submitbutton}
+
+            return render(request, 'guide/search_results.html', context)
+
+        else:
+            return render(request, 'guide/search_results.html')
+
+    else:
+        return render(request, 'guide/search_results.html')
