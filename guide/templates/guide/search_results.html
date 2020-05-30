@@ -6,30 +6,37 @@
         <br /><br />
         <h1>Results for <b>{{ request.GET.q }}</b></h1>
         <br/><br/>
-        
-        {% for plant in results %}
-        
-        <div class='garden_mid'>
-            <div class='garden_marker_mid'>
-                <h3 class='garden_marker_mid'><a href="{% url 'plant_detail' slug=plant.slug %}">{{ plant.name }}</a></h3>
-                <p class='info_mid'>Latin name: {{ plant.genus }} {{ plant.species }}</p>
-            </div>
-            <div class='garden_marker_mid'>
-                <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='thumbnail' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
-                <h3 class='subject_mid'>Description:</h3>
-                <p class='short_mid'>{{ plant.description }}</p>
-            </div>
-        </div>
-        <br />
+                {% for plant in results %}
+                
+                <div class='group_garden_pot'>
+                    <div class='group_garden_info'>
+                        <h3><a href="{% url 'plant_detail' slug=plant.slug %}">{{ plant.name }}</a></h3>
+                        <p>Latin name: {{ plant.genus }} {{ plant.species }}</p>
+                    </div>
+                    <div class='group_garden_plant'>
+                        <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='group_garden_plant_image' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
+                        <h3>Description:</h3>
+                        <p class='plant_descriptions'>{{ plant.description }}</p>
+                    </div>
+                </div>
+                <br />
 
-        {% endfor %}
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
+                {% endfor %}
+                <br /><br />
+                <p>If you didn't find what you were looking for, we may not have it. But as a reminder, you can search any single name, genus, species, or family in the database.</p>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         {% else %}
-        <br /><br /><br />
-        <h3>Use the search bar on the top right to look for plants by name</h3>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br />
+            <h3>Use the search bar on the top right to look for plants by any one of:</h3>
+            <h3>
+                <ul>
+                    <li>name</li>
+                    <li>species</li>
+                    <li>genus</li>
+                    <li>family</li>
+                </ul>
+            </h3>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         {% endif %}
 
 
