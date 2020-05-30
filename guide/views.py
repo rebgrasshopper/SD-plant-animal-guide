@@ -74,7 +74,9 @@ def search_results(request):
 
         if query is not None:
 
-            results= Plant.objects.filter(name__icontains=query)
+            lookups= Q(name__icontains=query) | Q(genus__icontains=query) | Q(species__icontains=query) | Q(family__icontains=query)
+
+            results= Plant.objects.filter(lookups)
 
             context={'results': results,
                      'submitbutton': submitbutton}
