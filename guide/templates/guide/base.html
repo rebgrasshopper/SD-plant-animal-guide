@@ -23,9 +23,9 @@
                     <li id='dropdown_item' class='navli'>
                         <a href='javascript:void(0)' class='dropbtn'>Plants</a>
                         <ul>
-                            <li class='navli_under'><a href='#'>Native</a></li>
-                            <li class='navli_under'><a href='#'>Non-Native</a></li>
-                            <li class='navli_under'><a href='#'>Invasive</a></li>
+                            <li class='navli_under'><a href='{% url "native_plants_list" %}'>Native</a></li>
+                            <li class='navli_under'><a href='{% url "non_native_plants_list" %}'>Non-Native</a></li>
+                            <li class='navli_under'><a href='{% url "invasive_plants_list" %}'>Invasive</a></li>
                         </ul>                 
                     </li>
                     <li class='navli'><a href='{% url "contact" %}'>Contact</a></li>

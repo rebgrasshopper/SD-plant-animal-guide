@@ -1,0 +1,27 @@
+{% extends 'guide/base.html' %}
+
+{% block content %}
+
+<div class='group_garden'>
+    <br /><br /><br />
+    <div>
+        <h2>Native Plants</h2>
+    </div>
+    <br /><br /><br />
+    {% for plant in plants %}
+        <div class='group_garden_pot'>
+            <div class='group_garden_info'>
+                <h3><a href="{% url 'plant_detail' slug=plant.slug %}">{{ plant.name }}</a></h3>
+                <p>Latin name: {{ plant.genus }} {{ plant.species }}</p>
+            </div>
+            <div class='group_garden_plant'>
+                <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='group_garden_plant_image' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
+                <h3>Description:</h3>
+                <p class='plant_descriptions'>{{ plant.description }}</p>
+            </div>
+        </div>
+        <br />
+    {% endfor %}
+</div>
+
+{% endblock %}

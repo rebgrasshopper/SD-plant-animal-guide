@@ -22,6 +22,21 @@ def about(request):
     '''view for about page'''
     return render(request, 'guide/about.html')
 
+def native_plants_list(request):
+    '''view for native plants page'''
+    plants = Plant.objects.filter(status='Native').order_by('species')
+    return render(request, "guide/native_plants_list.html", {'plants':plants})
+
+def non_native_plants_list(request):
+    '''view for non-native plants page'''
+    plants = Plant.objects.filter(status='Non-native').order_by('species')
+    return render(request, "guide/non_native_plants_list.html", {'plants':plants})
+
+def invasive_plants_list(request):
+    '''view for invasive plants page'''
+    plants = Plant.objects.filter(status='Invasive').order_by('species')
+    return render(request, "guide/invasive_plants_list.html", {'plants':plants})
+
 def contact(request):
     '''view for contact page'''
     form_class = ContactForm
@@ -67,6 +82,7 @@ def contact(request):
 
 
 def search_results(request):
+    '''display for search results'''
     if request.method == 'GET':
         query= request.GET.get('q')
 

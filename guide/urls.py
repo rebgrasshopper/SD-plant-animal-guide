@@ -10,4 +10,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('search/', views.search_results, name='search_results'),
+    path('native_plants/', views.native_plants_list, name='native_plants_list'),
+    path('non_native_plants/', views.non_native_plants_list, name='non_native_plants_list'),
+    path('invasive_plants/', views.invasive_plants_list, name='invasive_plants_list'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
