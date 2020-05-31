@@ -32,8 +32,9 @@
                     <li class='end_li'></li>
                     <li class='search_li'>
                         <form action = "{% url 'search_results' %}" method="GET" value="{{ request.GET.q }}">
-                            <input id='search_box' name='q' type='text' value='{{ request.GET.q }}' placeholder='Search..'>
                             <button id='search_button' type='submit' value="search"><img id='search_image' src="https://i.postimg.cc/13ZgVGpy/search-icon.png"></button>
+                            <input id='search_box' name='q' type='text' value='{{ request.GET.q }}' placeholder='Search..'>
+                            
                         </form>
                     </li>
 
