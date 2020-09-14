@@ -21,12 +21,12 @@
 
                     <!-- IMAGES -->
                     <div class='detail_image_div'>
-                        <img id='detail_image' src="{{ plant.image_flower.url }}" title="{{ plant.image_flower_title }}">
+                        <img id='detail_image' src="{{ plant.image_flower }}" title="{{ plant.image_flower_title }}">
                         <br /><br />
-                        <button type="button" id="whole" onclick="becomeWhole()"><img src="{{ plant.image_whole.url }}" style="width: 75px; float: left;"></button>
-                        <button type="button" id="leaf" onclick="becomeLeaf()"><img src="{{ plant.image_leaf.url }}" style="width: 75px; float: left;"></button>
-                        <button type="button" id="flower" onclick="becomeFlower()"><img src="{{ plant.image_flower.url }}" style="width: 75px; float: left;"></button>
-                        <button type="button" id="fruit" onclick="becomeFruit()"><img src="{{ plant.image_fruit.url }}" style="width: 75px; float: left;"></button>
+                        <button type="button" id="whole" onclick="becomeWhole()"><img src="{{ plant.image_whole }}" style="width: 75px; float: left;"></button>
+                        <button type="button" id="leaf" onclick="becomeLeaf()"><img src="{{ plant.image_leaf }}" style="width: 75px; float: left;"></button>
+                        <button type="button" id="flower" onclick="becomeFlower()"><img src="{{ plant.image_flower }}" style="width: 75px; float: left;"></button>
+                        <button type="button" id="fruit" onclick="becomeFruit()"><img src="{{ plant.image_fruit }}" style="width: 75px; float: left;"></button>
 
                     </div>
 
@@ -82,19 +82,19 @@
                 </div>
                 <script type="text/javascript">
                     function becomeWhole() {
-                        document.getElementById("detail_image").src="{{ plant.image_whole.url }}"
+                        document.getElementById("detail_image").src="{{ plant.image_whole }}"
                     }
 
                     function becomeLeaf() {
-                        document.getElementById("detail_image").src="{{ plant.image_leaf.url }}"
+                        document.getElementById("detail_image").src="{{ plant.image_leaf }}"
                     }
 
                     function becomeFlower() {
-                        document.getElementById("detail_image").src="{{ plant.image_flower.url }}"
+                        document.getElementById("detail_image").src="{{ plant.image_flower }}"
                     }
 
                     function becomeFruit() {
-                        document.getElementById("detail_image").src="{{ plant.image_fruit.url }}"
+                        document.getElementById("detail_image").src="{{ plant.image_fruit }}"
                     }
                 </script>
             </div>

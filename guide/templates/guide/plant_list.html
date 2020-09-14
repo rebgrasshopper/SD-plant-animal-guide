@@ -13,7 +13,7 @@
                     <p class='info'>Latin name: {{ plant.genus }} {{ plant.species }}</p>
                 </div>
                 <div class='garden_marker'>
-                    <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='thumbnail' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
+                    <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='thumbnail' src='{{ plant.image_flower }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
                     <h3 class='subject'>Description:</h3>
                     <p class='short'>{{ plant.description }}</p>
                 </div>
@@ -34,7 +34,7 @@
                     <p class='info_mid'>Latin name: {{ plant.genus }} {{ plant.species }}</p>
                 </div>
                 <div class='garden_marker_mid'>
-                    <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='thumbnail' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
+                    <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='thumbnail' src='{{ plant.image_flower }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
                     <h3 class='subject_mid'>Description:</h3>
                     <p class='short_mid'>{{ plant.description }}</p>
                 </div>
@@ -54,7 +54,7 @@
                     <p class='info'>Latin name: {{ plant.genus }} {{ plant.species }}</p>
                 </div>
                 <div class='garden_marker'>
-                    <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='thumbnail' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
+                    <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='thumbnail' src='{{ plant.image_flower }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
                     <h3 class='subject'>Description:</h3>
                     <p class='short'>{{ plant.description }}</p>
                 </div>

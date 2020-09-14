@@ -15,7 +15,7 @@
                 <p>Latin name: {{ plant.genus }} {{ plant.species }}</p>
             </div>
             <div class='group_garden_plant'>
-                <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='group_garden_plant_image' src='{{ plant.image_flower.url }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
+                <a href="{% url 'plant_detail' slug=plant.slug %}"><img class='group_garden_plant_image' src='{{ plant.image_flower }}' title='{{ plant.image_whole_title }}' height = '100px'></a>
                 <h3>Description:</h3>
                 <p class='plant_descriptions'>{{ plant.description }}</p>
             </div>
