@@ -4,7 +4,7 @@
 
 ![screenshot of San Diego Nature Journal](./guide/static/images/screenshot.png)
 
-sandiegonaturejournal.pythonanywhere.com
+[Check out the deployed project!](sandiegonaturejournal.pythonanywhere.com)
 
 Table Of Contents:
 
@@ -32,6 +32,7 @@ You can use the code of this project for anything within the limitations of the 
 GNU General Public License v3.0
 
 ## Credits:
+    Thanks to Trey and Michael for help whenever I ask!
 
 - [Trey Hunner](https://treyhunner.com/)
 - [Michael Nekrasov](https://michaelnekrasov.com/)
