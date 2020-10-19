@@ -4,7 +4,7 @@
 
 ![screenshot of San Diego Nature Journal](./guide/static/images/screenshot.png)
 
-[Check out the deployed project!](sandiegonaturejournal.pythonanywhere.com)
+[Check out the deployed project!](https://sandiegonaturejournal.pythonanywhere.com)
 
 Table Of Contents:
 
